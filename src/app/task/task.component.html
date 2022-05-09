@@ -1,0 +1,14 @@
+<div id="mainDiv" class="d-flex align-items-baseline justify-content-between">
+    
+    <input [checked]='todoItem.checked' (click)="checked()" class="form-check-input p-2" type="checkbox">
+
+    <div [ngStyle]="{'text-decoration': completeStyle()}" class="p-2">{{todoItem.value}}</div>
+
+    <div class="button ms-auto p-2">
+        <button class="completed" (click)="completed()"><i class="bi bi-check-circle"></i></button>
+        <button class="editBtn" (click)="edit()" ><i class="bi bi-pencil-square"></i></button>
+        <button class="trash"(click)="moveToTrash()"><i class="bi bi-x-circle"></i></button>
+    </div>
+    
+
+</div>

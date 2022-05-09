@@ -1,0 +1,36 @@
+
+
+#mainDiv .form-check {
+    font-weight:700;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+    transition: .3s;
+}
+
+#mainDiv .button button {
+    border: hidden;
+    background: bottom;
+}
+
+#mainDiv .button button i{
+    pointer-events:none
+}
+
+#mainDiv .button .completed {
+    color: #3ec282;
+}
+
+#mainDiv .button .trash {
+    color: #e72727;
+}
+
+#mainDiv .button .editBtn {
+    color: #384cff;
+}
+
+.completed {
+    background: #bebebe;
+}

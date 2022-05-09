@@ -1,0 +1,32 @@
+<div id="mainDiv" class="container mt-5">
+    <label class="mb-3 form-label d-flex justify-content-center">
+        <h2>To Do List</h2>
+    </label>
+    <div class="input-group mb-3">
+        <input type="text" class="input_task form-control border-success" (keyup.enter)="addTask()"
+         [(ngModel)]="toDoText"  placeholder="To do ...">
+        <button class="add_task btn btn-outline-success " (click)="addTask()" type="submit">{{ AddEdit }}</button>
+    </div>
+
+
+    <div class="form-check mb-4">
+        <input (click)="selectAll()" class="form-check-input p-2" type="checkbox" [checked]="selectAllChecked"  id="select All">
+        <label class="form-check-label">
+            Select All
+        </label>
+    </div>
+
+    <app-task *ngFor="let toDoTask of tasksArray; let i = index" (completedOut)='completed($event,i)' (checkedOut)='checkedManual($event,i)' 
+    [checkMark]='checked' [completeStatusAll]="completeAllStatus"  [todoItem]="toDoTask" 
+    (edited)="editedTest($event,i)" (trash)="moveToTrash(i)">
+    </app-task>
+
+</div>
+
+
+
+
+<div class="mb-3 d-flex justify-content-center">
+    <button class="clear_all btn btn-outline-success " type="button" (click)="clearAll()">{{AllMultiple}}</button>
+    <button class="clear_all btn btn-outline-success " type="button" (click)="markSeleceted()" >Mark As completed</button>
+</div>    

@@ -1,0 +1,8 @@
+
+#mainDiv { 
+    width: 900px;
+}
+
+#mainDiv .form-check {
+    font-weight:700;
+}
